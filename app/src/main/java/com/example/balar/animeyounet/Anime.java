@@ -6,19 +6,19 @@ import android.os.Parcelable;
 import java.io.Serializable;
 
 public class Anime implements Parcelable {
-    private String judul, gambar, tanggal, genre/*, video, video1, video2*/;
+    private String judul, gambar, tanggal, genre, video, video1, video2;
 
-    public Anime(String judul, String gambar, String tanggal, String genre/*, String video, String video1, String video2*/){
+    public Anime(String judul, String gambar, String tanggal, String genre, String video ,String video1, String video2){
         this.judul = judul;
         this.gambar = gambar;
         this.tanggal = tanggal;
         this.genre = genre;
-        /*this.video = video;
-        this.video1 = video1;
-        this.video2 = video2;*/
+        this.video = video;
+       this.video1 = video1;
+        this.video2 = video2;
     }
 
-    /*public String getVideo() {
+    public String getVideo() {
         return video;
     }
 
@@ -40,7 +40,7 @@ public class Anime implements Parcelable {
 
     public void setVideo2(String video2) {
         this.video2 = video2;
-    }*/
+    }
 
     public String getJudul() {
         return judul;
@@ -86,6 +86,9 @@ public class Anime implements Parcelable {
         dest.writeString(this.gambar);
         dest.writeString(this.tanggal);
         dest.writeString(this.genre);
+        dest.writeString(this.video);
+        dest.writeString(this.video1);
+        dest.writeString(this.video2);
     }
 
     protected Anime(Parcel in) {
@@ -93,6 +96,9 @@ public class Anime implements Parcelable {
         this.gambar = in.readString();
         this.tanggal = in.readString();
         this.genre = in.readString();
+        this.video = in.readString();
+        this.video1 = in.readString();
+        this.video2 = in.readString();
     }
 
     public static final Creator<Anime> CREATOR = new Creator<Anime>() {

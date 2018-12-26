@@ -6,19 +6,19 @@ import android.os.Parcelable;
 import java.io.Serializable;
 
 public class AnimeItem implements Serializable {
-    private String judul, gambar, tanggal, genre/*, video, video1, video2*/;
+    private String judul, gambar, tanggal, genre, video, video1, video2;
 
-    public AnimeItem(String judul, String gambar, String tanggal, String genre/*, String video, String  video1, String video2*/){
+    public AnimeItem(String judul, String gambar, String tanggal, String genre, String video ,String  video1, String video2){
         this.judul = judul;
         this.gambar = gambar;
         this.tanggal = tanggal;
         this.genre = genre;
-        /*this.video = video;
+        this.video = video;
         this.video1 = video1;
-        this.video2 = video2;*/
+        this.video2 = video2;
     }
 
-    /*public String getVideo() {
+    public String getVideo() {
         return video;
     }
 
@@ -40,7 +40,7 @@ public class AnimeItem implements Serializable {
 
     public void setVideo2(String video2) {
         this.video2 = video2;
-    }*/
+    }
 
     public String getJudul() {
         return judul;

@@ -7,20 +7,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 
 
@@ -70,8 +62,6 @@ import butterknife.ButterKnife;
         return listViewItem;
     }*/
 
-
-
 public class AnimeAdapter extends RecyclerView.Adapter<AnimeAdapter.ViewHolder> {
     private ArrayList<AnimeItem> animeItemList;
     private Context context;
@@ -108,10 +98,10 @@ public class AnimeAdapter extends RecyclerView.Adapter<AnimeAdapter.ViewHolder> 
                 Anime anime = new Anime(getAnimeItem().get(i).getJudul(),
                         getAnimeItem().get(i).getGambar(),
                         getAnimeItem().get(i).getTanggal(),
-                        getAnimeItem().get(i).getGenre()/*,
+                        getAnimeItem().get(i).getGenre(),
                         getAnimeItem().get(i).getVideo(),
                         getAnimeItem().get(i).getVideo1(),
-                        getAnimeItem().get(i).getVideo2()*/
+                        getAnimeItem().get(i).getVideo2()
                 );
                 intent.putExtra("detail", anime);
                 context.startActivity(intent);
@@ -129,10 +119,11 @@ public class AnimeAdapter extends RecyclerView.Adapter<AnimeAdapter.ViewHolder> 
                 Anime anime = new Anime(getAnimeItem().get(i).getJudul(),
                         getAnimeItem().get(i).getGambar(),
                         getAnimeItem().get(i).getTanggal(),
-                        getAnimeItem().get(i).getGenre()/*,
+                        getAnimeItem().get(i).getGenre(),
                         getAnimeItem().get(i).getVideo(),
                         getAnimeItem().get(i).getVideo1(),
-                        getAnimeItem().get(i).getVideo2()*/
+                        getAnimeItem().get(i).getVideo2()
+
                 );
                 intent.putExtra("detail", anime);
                 context.startActivity(intent);
